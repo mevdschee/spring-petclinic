@@ -27,7 +27,7 @@
     <webjars-jquery.version>2.2.4</webjars-jquery.version>
     <wro4j.version>1.8.0</wro4j.version>
     <thymeleaf.version>3.0.6.RELEASE</thymeleaf.version>
-
+    <tqdev-metrics.version>0.9.7</tqdev-metrics.version>
     <cobertura.version>2.7</cobertura.version>
 
   </properties>
@@ -114,6 +114,27 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-core</artifactId>
+      <version>${tqdev-metrics.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-jmx</artifactId>
+      <version>${tqdev-metrics.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-spring</artifactId>
+      <version>${tqdev-metrics.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-jdbc</artifactId>
+      <version>${tqdev-metrics.version}</version>
     </dependency>
   </dependencies>
 
