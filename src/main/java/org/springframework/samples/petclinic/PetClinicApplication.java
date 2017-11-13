@@ -20,6 +20,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+import com.tqdev.metrics.core.MetricRegistry;
+import com.tqdev.metrics.influxdb.InfluxDbHttpReporter;
+import com.tqdev.metrics.jvm.SystemMonitor;
+
 /**
  * PetClinic Spring Boot Application.
  * 
@@ -31,6 +35,8 @@ import org.springframework.context.annotation.ComponentScan;
 public class PetClinicApplication {
 
 	public static void main(String[] args) throws Exception {
+		new SystemMonitor(MetricRegistry.getInstance());
+		InfluxDbHttpReporter.start("http://localhost:8086/write?db=collectd", "localhost", 10);
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 

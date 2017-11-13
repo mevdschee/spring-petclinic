@@ -27,7 +27,7 @@
     <webjars-jquery.version>2.2.4</webjars-jquery.version>
     <wro4j.version>1.8.0</wro4j.version>
     <thymeleaf.version>3.0.6.RELEASE</thymeleaf.version>
-    <tqdev-metrics.version>0.9.7</tqdev-metrics.version>
+    <tqdev-metrics.version>0.9.9-SNAPSHOT</tqdev-metrics.version>
     <cobertura.version>2.7</cobertura.version>
 
   </properties>
@@ -134,6 +134,16 @@
     <dependency>
       <groupId>com.tqdev.metrics</groupId>
       <artifactId>metrics-jdbc</artifactId>
+      <version>${tqdev-metrics.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-jvm</artifactId>
+      <version>${tqdev-metrics.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-influxdb</artifactId>
       <version>${tqdev-metrics.version}</version>
     </dependency>
   </dependencies>
