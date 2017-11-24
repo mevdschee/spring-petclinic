@@ -27,7 +27,7 @@
     <webjars-jquery.version>2.2.4</webjars-jquery.version>
     <wro4j.version>1.8.0</wro4j.version>
     <thymeleaf.version>3.0.6.RELEASE</thymeleaf.version>
-    <tqdev-metrics.version>0.9.9-SNAPSHOT</tqdev-metrics.version>
+    <tqdev-metrics.version>0.9.12</tqdev-metrics.version>
     <cobertura.version>2.7</cobertura.version>
 
   </properties>
@@ -128,7 +128,12 @@
     </dependency>
     <dependency>
       <groupId>com.tqdev.metrics</groupId>
-      <artifactId>metrics-spring</artifactId>
+      <artifactId>metrics-spring-webmvc</artifactId>
+      <version>${tqdev-metrics.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tqdev.metrics</groupId>
+      <artifactId>metrics-spring-loaders</artifactId>
       <version>${tqdev-metrics.version}</version>
     </dependency>
     <dependency>

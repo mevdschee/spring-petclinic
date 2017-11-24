@@ -35,8 +35,9 @@ import com.tqdev.metrics.jvm.SystemMonitor;
 public class PetClinicApplication {
 
 	public static void main(String[] args) throws Exception {
-		new SystemMonitor(MetricRegistry.getInstance());
-		InfluxDbHttpReporter.start("http://localhost:8086/write?db=collectd", "localhost", 10);
+		MetricRegistry registry = MetricRegistry.getInstance();
+		new SystemMonitor(registry);
+		new InfluxDbHttpReporter("http://localhost:8086/write?db=collectd", "localhost", false, registry).run(10);
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
